@@ -1,0 +1,35 @@
+/*
+**************************
+
+    LAYOUT.SCSS
+    use this file only to create grids and layouts,
+    no other visual styling.
+
+**************************
+*/
+
+/*
+    SAMPLE DATA ONLY.....
+*/
+
+// note: ms(0) is returning the 0th place-holder created w/ modular-scale. Either 1.4 or 1.618.
+// checkout examples @ http://www.modularscale.com/ && https://github.com/modularscale/modularscale-sass
+.your-container
+{
+    lost-utility: clearfix;
+    .your-item
+    {
+        min-height: 200px;
+        lost-column: 1/4 4 ms(0);
+        @include mq($_mobile) {
+            lost-column: 1/3 4 ms(0);
+        }
+
+        @include mq($crazy_pair) {
+            lost-column: 1/2 4 ms(0);
+        }
+        @include mq($_mobile){
+            lost-column:1/1 1 ms(0);
+        }
+    }
+}

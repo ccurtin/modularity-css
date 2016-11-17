@@ -1,0 +1,27 @@
+/* 
+**************************
+
+    MIXINS.SCSS
+    custom mixins for the project.
+
+**************************
+*/
+
+/*
+  I use this often for things like overlays on a box or background images.
+  Also used with things like :pseudo elements to create layers/texture, hover effects.
+*/
+@mixin absolute_full_container{
+  position: absolute;
+  height:100%;
+  width:100%;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+@mixin gradient_radial($color1: #fefefe, $color2: #cbcbcb, $color3: #c7c7c7) {
+  background: $color1;
+  background-image: radial-gradient(center ellipse, $color1 12%, $color1 47%, $color2 96%, $color3 100%);
+}

@@ -1,0 +1,104 @@
+/*
+**************************
+
+    VARIABLES.SCSS
+
+    This file is for including all variables in your project.
+    Putting them in one place makes it easier for yourself(and others)
+    to easily make global changes with out searching for files and changing many instances.
+
+**************************
+ */
+
+
+
+/*
+***************************************************************************
+    Media Queries for breakpoint-sass. [https://github.com/at-import/breakpoint]
+***************************************************************************
+*/
+$_mobile: max-width 767px;
+$_tablet: max-width 1024px;
+$_desktop: max-width 64em;
+
+// A ridiculous example, applys between 767_1024 width _AND_ height is between 420 and 800
+$crazy_pair: (width 767px 1024px) (height 420px 820px);
+// A ridiculous example, applys between 767_1024 width _OR_ height is between 420 and 800
+$crazy_pair_two: (width 767px 1024px), (height 420px 820px);
+
+
+
+/*
+**********
+    Colors
+**********
+*/
+
+$colors:(
+  "primary_1": #36C2CE,
+  "primary_2":#5DF2FF,
+  "primary_3":#157981,
+  "accent_1":#004E47,
+  "accent_2":#219B8F,
+  "accent_3":#9B4319
+);
+
+
+/*
+****************************************
+* MODUAR SCALE SETTINGS! use ms() function to pu
+****************************************
+*/
+/**
+ * for setting breakpoints for ms-respond.
+ * Enter the PX and converts to proper EMs for responsive modular-scale method.
+ * @param  {[type]} $pixels [description]
+ * @return {[type]}         [description]
+ */
+@function ms_breakpoint($pixels){
+  @if $pixels == 0 { @return 0 }
+  @return ($pixels/16) + 0em;
+}
+/* When using ms() or ms-respond(), as we ascend or descend, we swap back and forth from .5em to 1em */
+$ms-base: .50em 1em;
+// wont' work if $ms-fluid is set to true.
+$ms-ratio: $golden;
+$ms-fluid: true;
+$ms-range:
+  $fourth  ms_breakpoint(500), /* when screen is less than 20em scale @ 1.4 ratio */
+  $golden  ms_breakpoint(1024); /* when screen is GREATER than 1024px(converted to 64em(1024/16(base))) then scale @1.618 $golden  */
+
+
+
+/*
+****************************************
+* GRIDS ( heights & widths ) SAMPLE INFO ONLY.
+****************************************
+*/
+$wrapper_width: 100%;
+$layout_width: 140rem;
+// $mobile_width: mobile width not is defined as less than $tablet_width
+// widths are 1px larger than typical device width for _mixins.scssfoo
+$tablet_width: 768px; // tablet size is 768 <> 124
+$desktop_width: 1025px; // computer screens and larger
+$header_height:22rem; //  desktop
+$header_height_tablet: auto; // tablet
+$header_height_mobile: auto; // moble
+$footer_height:12rem;
+
+
+/*
+****************************************
+    TYPOGRAPHY
+****************************************
+*/
+$base_font: "Open Sans", Helvetica, sans_serif;
+$accent_font: "Bebas Neue", Helvetica, sans_serif;
+
+
+
+/*
+****************************************
+* MISC STYLING
+****************************************
+*/

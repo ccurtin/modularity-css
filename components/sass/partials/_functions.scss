@@ -1,0 +1,16 @@
+/* 
+**************************
+
+    FUNCTIONS.SCSS
+    custom functions for the project.
+
+**************************
+*/
+
+/*
+  return a $colors key.
+  ex: color(primary)
+*/
+@function color($key) {
+  @return map-get($colors, $key);
+}

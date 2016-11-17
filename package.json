@@ -1,0 +1,35 @@
+{
+  "name": "sass-app-boilerplate",
+  "version": "0.1.0",
+  "description": "SASS/PostCSS boilerplate for building website and apps using the LibSass implementation. Includes popular modules, so you can get straight to building, creating, developing. Helpful for users migrating from SASS to PostCSS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SASS",
+    "PostCSS",
+    "SASS to PostCSS Migration",
+    "boilerplate"
+  ],
+  "author": "Christopher James Curtin <work@christopherjamescurtin.com> (http://christopherjamescurtin.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.3.4",
+    "beepbeep": "^1.2.0",
+    "breakpoint-sass": "^2.7.0",
+    "browser-sync": "^2.11.2",
+    "css-mqpacker": "^5.0.1",
+    "cssnano": "^3.8.0",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "lost": "^6.7.2",
+    "modularscale-sass": "^2.1.1",
+    "postcss-responsive-font": "^1.0.0"
+  }
+}

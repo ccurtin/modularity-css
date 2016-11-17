@@ -1,0 +1,44 @@
+/*
+**************************
+
+    TYPOGRAPHY.SCSS
+
+**************************
+*/
+:root, html {
+  font-size: 10px;
+}
+body {
+  line-height: 1;
+  max-width: ms(19);
+  margin: 0 auto;
+  font-family: Merriweather, serif;
+  line-height: ms(5);
+  font-size: ms(5);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: ms(4);
+  margin: 0;
+}
+/*
+  Creates sizings for headings.
+*/
+$compression: 3; // starts at the 4th multiple of the golden ration when flip-flopping between .5em and 1em
+$stop_scaling_headings_at: 12;
+@for $i from 1 through $stop_scaling_headings_at {
+  h#{$i} {
+    font-size-responsive: ms(4) ms(($i*-1 + 8)) 480px 1024px;
+  }
+}
+// Make a specific heading a specific range...
+// h1 {
+//     font-size-responsive: ms(2) ms(7) 480px 1024px;
+// }
+
+p {
+  font-size-responsive: ms(1) ms(3) 480px 1024px;
+  line-height: ms(0,$golden);
+  margin-top: ms(1,$golden) + 0em;
+  margin-bottom: ms(1,$golden) + 0em;
+}

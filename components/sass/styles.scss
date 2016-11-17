@@ -1,0 +1,34 @@
+/*
+******************************
+
+    STYLES.SCSS
+	load in all utilities, plugins and partials.
+    each project is unique and may require unique partials to better organize sections.
+
+*/
+
+
+/*
+******************************
+* 	CORE PLUGINS
+******************************
+*/
+// https://github.com/at-import/breakpoint
+@import "../../node_modules/breakpoint-sass/stylesheets/breakpoint";
+// https://github.com/modularscale/modularscale-sass
+@import "../../node_modules/modularscale-sass/stylesheets/modular-scale";
+/*
+******************************
+*   CORE PARTIALS
+******************************
+*/
+@import "partials/variables";
+@import "partials/functions";
+@import "partials/mixins";
+@import "partials/reset";
+@import "partials/layout";
+@import "partials/base";
+@import "partials/typography";
+// @import "partials/menus";
+// @import "partials/buttons";
+// @import "partials/etc";

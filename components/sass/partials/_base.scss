@@ -1,0 +1,40 @@
+/*
+**************************
+
+    BASE.SCSS
+
+**************************
+*/
+.site-wrapper{
+  max-width: ms(19);
+}
+
+// BELOW IS SAMPLE CODE ONLY.....
+.container {
+  // lost-masonry-wrap: no-flex;
+  max-width: 100%;
+}
+.box-container{
+  lost-utility:clearfix;
+  margin-bottom:ms(8);
+}
+.box {
+  min-height: 200px;
+  lost-column: 1/4 4 ms(0);
+  margin-bottom: ms(0);
+  background: #EEE;
+  border: 1px solid #CCC;
+
+  @include breakpoint($_mobile) {
+    background: #000;
+  }
+
+  @include breakpoint($crazy_pair) {
+    background: #F00;
+    color: #000;
+  }
+  @include mq($_mobile){
+    lost-column:1/1;
+  }
+}
+// ....END SAMPLE CODE.
