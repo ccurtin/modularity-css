@@ -1,6 +1,6 @@
 # Modularity - A Design Boilerplate for Compiling CSS.
 
-Modularity is a boilerplate and methodology for compiling your CSS and revolves around PostCSS and SASS and uses GulpJS. It's a basis for provinding you with all of your CSS needs to become more efficienet and organized. It is meant to encourage best practices and ease-of-use when building sites.
+Modularity is a boilerplate and methodology for compiling your CSS and revolves around PostCSS and SASS and uses GulpJS. It's a basis for providing you with all of your CSS needs to become more efficienet and organized. It is meant to encourage best practices and ease-of-use when building sites.
 
 # To Use:
 - install nodeJS
