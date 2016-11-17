@@ -1,7 +1,7 @@
 # Modularity - A Design Boilerplate for Compiling CSS.
 
 <p align="center">
-![modularity-design-boilerplate](https://camo.githubusercontent.com/ae746e186fc99bfd41fe3c745d515786d9b2e551/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f732e6364706e2e696f2f3434383230302f6d6f64756c61726974792d6373732d64657369676e2e6a7067)
+    <img src="https://camo.githubusercontent.com/ae746e186fc99bfd41fe3c745d515786d9b2e551/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f732e6364706e2e696f2f3434383230302f6d6f64756c61726974792d6373732d64657369676e2e6a7067">
 </p>
 
 Modularity is a boilerplate and methodology for compiling your CSS and revolves around PostCSS and SASS and uses GulpJS. It's a basis for providing you with all of your CSS needs to become more efficienet and organized. It is meant to encourage best practices and ease-of-use when building sites.
