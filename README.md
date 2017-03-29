@@ -10,7 +10,7 @@ Modularity is a boilerplate and methodology for compiling your CSS and revolves 
 - install nodeJS
 - install npm
 - clone this repo
-- open a shell up in the project folder and run `gulp`
+- open a shell up in the project folder and run `npm install` to install dependencies and then run `gulp` to watch && process
 - Edit styles ONLY from the `components` folder and they are output in the `app` folder. Include the `SCSS` file extension if you are using SASS mixins. If you are only using PostCSS, you can use plain CSS files.
 
 # How it Works: 
