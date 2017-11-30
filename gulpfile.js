@@ -112,30 +112,34 @@ gulp.task('browser-sync', ['process-styles'], function () {
   A Mix of SASS(libsass) and PostCSS modules.
 */
 gulp.task('process-styles', function () {
-  return gulp.src(path.source.sassFiles)
-    .pipe(sourcemaps.init())
-    .pipe(plumber({
-      errorHandler: onErrorStyles
-    }))
-    .pipe(sass({
-      errLogToConsole: true
-    }))
-    .pipe(postcss([
-      lost(),
-      autoprefixer({
-        browsers: ['last 5 versions']
-      }),
-      cssnano(),
-      responsiveFont(),
-      mediaQueryPacker()
-    ]))
-    .pipe(rename("style.css"))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(path.app.cssDir))
-    .pipe(browserSync.stream({
-      match: '**/*.css',
-      stream: true
-    }));
+    // if using (s)FTP, servers erase the file completely before writing again.
+    // That empty file can get processed, resulting in an empty CSS file 
+    setTimeout(function(){
+      return gulp.src(path.source.sassFiles)
+        .pipe(sourcemaps.init())
+        .pipe(plumber({
+          errorHandler: onErrorStyles
+        }))
+        .pipe(sass({
+          errLogToConsole: true
+        }))
+        .pipe(postcss([
+          lost(),
+          autoprefixer({
+            browsers: ['last 5 versions']
+          }),
+          cssnano(),
+          responsiveFont(),
+          mediaQueryPacker()
+        ]))
+        .pipe(rename("style.css"))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(path.app.cssDir))
+        .pipe(browserSync.stream({
+          match: '**/*.css',
+          stream: true
+        }));
+     }, 300)
 });
 
 gulp.task('default', ['browser-sync']);
