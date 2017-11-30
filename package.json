@@ -1,5 +1,9 @@
 {
   "name": "sass-app-boilerplate",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/ccurtin/modularity-css.git"
+  },
   "version": "0.1.0",
   "description": "SASS/PostCSS boilerplate for building website and apps using the LibSass implementation. Includes popular modules, so you can get straight to building, creating, developing. Helpful for users migrating from SASS to PostCSS.",
   "main": "index.js",
